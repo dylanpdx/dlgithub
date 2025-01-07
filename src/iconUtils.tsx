@@ -1,12 +1,13 @@
 const mapping = [
     {exts: ['exe','dll'], icon: 'simple/windows'},
-    {exts: ['zip','rar','7z'], icon: 'octicons/file-zip'},
+    {exts: ['zip','rar','7z','gz'], icon: 'octicons/file-zip'},
     {exts: ['ipa', 'dmg'], icon: 'simple/apple'},
     {exts: ["apk"], icon: 'simple/android'},
     {exts: ["unitypackage"], icon: 'simple/unity'},
     {exts: ['js'], icon: 'simple/javascript'},
     {exts: ['ts'], icon: 'simple/typescript'},
     {exts: ['so'], icon: 'simple/linux'},
+    {exts: ['3dsx','cia'], icon: 'simple/nintendo3ds'},
 ];
 
 const getIconFor = (filename: string) => {
