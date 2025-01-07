@@ -4,6 +4,7 @@ import { Home } from './pages/Home/index.jsx';
 import { NotFound } from './pages/_404.jsx';
 import './style.css';
 import { Repo } from './pages/Repo/index.js';
+import { Release } from './pages/Release/index.js';
 
 export function App() {
 	return (
@@ -11,7 +12,9 @@ export function App() {
 			<main>
 				<Router>
 					<Route path="/" component={Home} />
+					<Route path="/:user/:repo/releases/tag/:tag" component={Release} />
 					<Route path="/:user/:repo" component={Repo} />
+					<Route path="/:user/:repo/*" component={Repo} />
 					<Route default component={NotFound} />
 				</Router>
 			</main>

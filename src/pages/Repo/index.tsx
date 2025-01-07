@@ -1,5 +1,5 @@
 import { useRoute } from 'preact-iso';
-import getGithubReleases from '../../api';
+import { getGithubReleases } from '../../api';
 import { useEffect, useState } from 'preact/hooks';
 import ReleaseView from '../../components/release';
 import Loading from '../../components/loading';
@@ -20,9 +20,9 @@ export function Repo() {
 			<h1 class={'repoText'}>Releases for {user}/{repo}</h1>
 			<div class="releaseList">
                 {loading ? <Loading/> : (
-                    releases.map(release => (
+                    releases.length > 0 ? releases.map(release => (
                         <div class="row"><div class="col"><ReleaseView release={release} /></div></div>
-                    ))
+                    )) : <h3 class='repoText'>It seems the author of {user}/{repo} hasn't provided any releases.</h3>
                 )}
 			</div>
 		</div>
