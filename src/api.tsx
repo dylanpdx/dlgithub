@@ -22,4 +22,15 @@ const getSingleRelease = async (user: string, repo: string, tag: string) => {
     }
 }
 
-export { getGithubReleases, getSingleRelease };
+const getLatestRelease = async (user: string, repo: string) => {
+    const url = `https://api.github.com/repos/${user}/${repo}/releases/latest`;
+    try {
+        const response = await fetch(url);
+        return await response.json() as unknown as Release;
+    } catch (error) {
+        console.error('Error fetching latest release:', error);
+        throw error;
+    }
+}
+
+export { getGithubReleases, getSingleRelease, getLatestRelease };

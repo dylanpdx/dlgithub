@@ -18,7 +18,7 @@ const ReleaseView = (props:{release:Release}) => {
     return (
         <div class="card">
             <header><h2>{props.release.name}</h2></header>
-            {props.release.prerelease ? <h3>This release is marked as a pre-release.</h3> : null}
+            {props.release.prerelease ? <h4>This release is marked as a pre-release.</h4> : null}
             <details>
                 <summary>View release details</summary>
                 <div class="card">
