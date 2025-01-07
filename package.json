@@ -7,9 +7,9 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"chota": "^0.9.2",
 		"preact": "^10.25.3",
 		"preact-iso": "^2.8.1",
+		"preact-markdown": "^2.1.0",
 		"preact-render-to-string": "^6.5.12"
 	},
 	"devDependencies": {

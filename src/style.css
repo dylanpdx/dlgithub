@@ -1,0 +1,18 @@
+.repo .releaseList{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.repoText{
+	text-align: center;
+}
+
+.dlIcon{
+	position: absolute;
+	left: 2%;
+	top: 32%;
+}
+
+.loading{
+	text-align: center;
+}
